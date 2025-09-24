@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metadata Sökmotor</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Länka till CSS-filen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-search"></i>
+      <h1>Metadata Sökmotor</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> Hem</a></li>
+        <li><a href="#"><i class="fas fa-info-circle"></i> Om oss</a></li>
+        <li><a href="#"><i class="fas fa-music"></i> Musik</a></li>
+        <li><a href="#"><i class="fas fa-file-powerpoint"></i> Presentationer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="search-section">
+      <h2><i class="fas fa-filter"></i> Sökfilter</h2>
+      <form id="searchForm" class="search-form">
+        <div class="form-group">
+          <label for="fileType"><i class="fas fa-file"></i> Filtyp</label>
+          <select id="fileType">
+            <option value="">Alla filtyper</option>
+            <option value="music">Musik</option>
+            <option value="powerpoint">PowerPoint</option>
+            <option value="pdf">PDF</option>
+            <option value="image">Bild</option>
+
+          </select>
+        </div>
+
+        <div class="filter-section">
+          <h3><i class="fas fa-calendar-alt"></i> Datumfilter</h3>
+          <div class="form-group">
+            <label for="dateFrom">Från</label>
+            <input type="date" id="dateFrom">
+          </div>
+          <div class="form-group">
+            <label for="dateTo">Till</label>
+            <input type="date" id="dateTo">
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="searchQuery"><i class="fas fa-search"></i> Sökord (filnamn eller metadata)</label>
+          <input type="text" id="searchQuery" placeholder="Ange sökord..." required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">
+            <i class="fas fa-search"></i> Sök
+          </button>
+        </div>
+      </form>
+    </aside>
+
+    <main>
+      <div class="results-header">
+        <h2><i class="fas fa-search-result"></i> Sökresultat</h2>
+        <div id="resultsCount" class="results-count">0 resultat</div>
+      </div>
+
+      <div id="resultsContainer">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Gör en sökning för att visa resultat</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-shield-alt"></i> Integritetspolicy</a>
+        <a href="#"><i class="fas fa-file-contract"></i> Användarvillkor</a>
+        <a href="#"><i class="fas fa-headset"></i> Support</a>
+      </div>
+      <div class="contact-info">
+        <h3><i class="fas fa-envelope"></i> Kontakt</h3>
+        <p>E-post: info@metadatasearch.exa.com</p>
+        <p>Telefon: 07-123 456 78</p>
+      </div>
+      <p>&copy; 2023 Metadata Sökmotor.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script> <!-- Länka till JavaScript-filen -->
+</body>
+
+</html>
